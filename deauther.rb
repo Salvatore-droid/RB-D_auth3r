@@ -163,6 +163,7 @@ def main
         sleep 2
         puts "exiting system..!!".colorize(:red)
         sleep 1
+        exit 0
     end
 end 
 
