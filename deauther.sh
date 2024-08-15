@@ -111,10 +111,10 @@ def start_up
 end
 
 def main
+    start_up
     banner
     puts "Enter quit to exit\n".colorize(:blue)
     sleep 2
-    start_up
     interfaces = `sudo airmon-ng`
     system("sudo airmon-ng")
     print "Enter interface name to proceed: ".colorize(:cyan)
