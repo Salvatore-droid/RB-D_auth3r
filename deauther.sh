@@ -107,6 +107,8 @@ def start_up
     else
         puts "Installing Ruby..!!".colorize(:magenta)
         install_ruby
+        puts "Initializing System boot up..!!".colorize(:green)
+        sleep 2
     end
 end
 
