@@ -120,12 +120,12 @@ def main
     print "Enter interface name to proceed: ".colorize(:cyan)
     interface = gets.chomp
     intermon = "#{interface}mon"
+    if interface == "quit"
+        puts "exiting system..!!".colorize(:red)
+        sleep 1
+        exit 0
+    end
     if interfaces.include?("#{interface}")||interfaces.include?("#{intermon}")
-        if interface == "quit"
-            puts "exiting system..!!".colorize(:red)
-            sleep 1
-            exit 0
-        end
         start(interface)
         dump(intermon, interface)
         print "Enter target BSSID to attack: ".colorize(:cyan)
